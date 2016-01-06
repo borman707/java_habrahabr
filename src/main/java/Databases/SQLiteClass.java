@@ -1,15 +1,8 @@
 package Databases;
 
-
-import org.json.JSONObject;
-
-import javax.naming.Context;
-import javax.naming.InitialContext;
 import javax.naming.NamingException;
-import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.logging.*;
 
 public class SQLiteClass {
     public static Connection conn;

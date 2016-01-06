@@ -2,13 +2,10 @@ import java.io.*;
 import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.http.HttpServlet;
-import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Iterator;
 
 import Databases.SQLiteClass;
 import org.json.JSONObject;
-import org.json.JSONException;
 
 public class MainServlet extends HttpServlet {
 
@@ -48,10 +45,7 @@ public class MainServlet extends HttpServlet {
                 case 0: //show all names
 
                     ArrayList<String> names = SQLiteClass.getAllNames();
-
-                    System.out.println(names.toString());
-
-
+                    
                     JSONObject jsonToReturn0 = new JSONObject();
                     jsonToReturn0.put("answer", "names");
                     jsonToReturn0.put("list", names.toString());
@@ -63,8 +57,6 @@ public class MainServlet extends HttpServlet {
 
                     String data = jsonObject.getString("name");
 
-                    System.out.println(data);
-
                     SQLiteClass.addName(data);
 
                     JSONObject jsonToReturn1 = new JSONObject();
@@ -72,8 +64,7 @@ public class MainServlet extends HttpServlet {
                     out.println(jsonToReturn1.toString());
 
                     break;
-
-
+                
                 default:
                     System.out.println("default switch");
                     break;
