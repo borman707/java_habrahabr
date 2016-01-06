@@ -38,9 +38,7 @@ public class SQLiteClass {
         Conn();
         stat = conn.createStatement();
         ResultSet rs = stat.executeQuery("select name from names");
-
-        System.out.println(rs.getString("name"));
-
+        
         while (rs.next()) {
             names.add(rs.getString("name"));
         }
