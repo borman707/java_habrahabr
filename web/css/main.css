@@ -1,0 +1,13 @@
+
+.btn
+{
+    margin: 10px;
+}
+
+.border
+{
+    margin: 10px;
+    border-size:1px;
+    border-style:solid;
+    border-color:lightgray;
+}
